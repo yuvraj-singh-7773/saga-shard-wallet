@@ -1,4 +1,4 @@
-package com.example.shardedSagaWallet.entitie;
+package com.example.shardedSagaWallet.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

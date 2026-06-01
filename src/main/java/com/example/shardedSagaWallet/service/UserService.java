@@ -1,13 +1,12 @@
 package com.example.shardedSagaWallet.service;
 
 
-import com.example.shardedSagaWallet.entitie.User;
+import com.example.shardedSagaWallet.entities.User;
 import com.example.shardedSagaWallet.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
-import java.util.Collections;
 import java.util.List;
 
 @Service
@@ -29,6 +28,6 @@ public class UserService {
 
     public List<User> getUsersByName(String name) {
 
-        return Collections.singletonList(userRepository.findByNameContainingIgnoreCase(name));
+        return userRepository.findByNameContainingIgnoreCase(name);
     }
 }

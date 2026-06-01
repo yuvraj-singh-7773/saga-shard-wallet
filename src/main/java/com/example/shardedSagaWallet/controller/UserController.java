@@ -1,6 +1,6 @@
 package com.example.shardedSagaWallet.controller;
 
-import com.example.shardedSagaWallet.entitie.User;
+import com.example.shardedSagaWallet.entities.User;
 import com.example.shardedSagaWallet.service.UserService;
 import groovy.util.logging.Slf4j;
 import lombok.RequiredArgsConstructor;
