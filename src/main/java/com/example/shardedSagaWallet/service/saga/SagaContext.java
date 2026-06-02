@@ -1,5 +1,6 @@
 package com.example.shardedSagaWallet.service.saga;
 
+import com.example.shardedSagaWallet.entities.TransactionStatus;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.checkerframework.checker.units.qual.N;
@@ -40,6 +41,14 @@ public class SagaContext {
         Object value = get(key);
         if ( value instanceof Number) {
             return BigDecimal.valueOf(((Number) value).doubleValue());
+        }
+        return null;
+    }
+
+    public TransactionStatus getString(String key) {
+        Object value = get(key);
+        if ( value instanceof String) {
+            return TransactionStatus.valueOf((String) value);
         }
         return null;
     }
