@@ -1,6 +1,7 @@
 package com.example.shardedSagaWallet.service.saga;
 
 import com.example.shardedSagaWallet.entities.TransactionStatus;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.checkerframework.checker.units.qual.N;
@@ -11,6 +12,7 @@ import java.util.Map;
 
 @Data
 @NoArgsConstructor
+@Builder
 public class SagaContext {
     private Map<String, Object> data;
 
